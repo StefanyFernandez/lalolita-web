@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/StefanyFernandez/lalolita-web/issues"
   },
-  "homepage": "https://github.com/StefanyFernandez/lalolita-web#readme",
+  "homepage": "https://github.com/StefanyFernandez/lalolita-web/pages/index.tsx",
   "dependencies": {
     "next": "^11",
     "react": "^17",
