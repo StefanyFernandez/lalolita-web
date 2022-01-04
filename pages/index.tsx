@@ -8,11 +8,14 @@ interface IndexProps {
 const index: React.FC<IndexProps> = () => (
   <React.Fragment>
     <Head>
-      <title>Hola Lolita</title>
+      <title>LaLolita</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="/styles.css" />
     </Head>
-    <h1>Hola Lolita</h1>
-    <h2>this is a test</h2>
+    <h1><img className='verySoonLogo' src="img/lalolita-logo-vertical.svg" /></h1>
+    <h2>very soon...</h2>
   </React.Fragment>
 );
 
