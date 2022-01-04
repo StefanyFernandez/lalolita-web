@@ -1,6 +1,10 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import", "unused-imports"],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "unused-imports"
+  ],
   "extends": [
     "airbnb-typescript",
     "eslint:recommended",
@@ -15,7 +19,10 @@
     "node": true
   },
   "parserOptions": {
-    "project": ["./tsconfig.eslint.json"]
+    "project": [
+      "./tsconfig.eslint.json"
+    ],
+    "warnOnUnsupportedTypeScriptVersion": false
   },
   "settings": {
     "react": {
@@ -30,7 +37,10 @@
     "no-console": [
       "error",
       {
-        "allow": ["warn", "error"]
+        "allow": [
+          "warn",
+          "error"
+        ]
       }
     ],
     "react/react-in-jsx-scope": "off",
