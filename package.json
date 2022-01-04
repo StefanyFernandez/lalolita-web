@@ -1,7 +1,7 @@
 {
-  "name": "ts-next-boilerplate",
-  "version": "1.0.11",
-  "description": "TypeScript Next.js Boilerplate",
+  "name": "la-lolita-web",
+  "version": "1",
+  "description": "LaLolita's Web",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -12,18 +12,18 @@
     "test-coverage-dev": "NODE_ENV=development jest --coverage --watchAll",
     "test-dev": "NODE_ENV=development npx jest --watch",
     "docker-build": "docker build -t boilerplate .",
-    "docker-run ": "docker run -p 8080:80 -e PROJECT_NAME=BinPar boilerplate"
+    "docker-run ": "docker run -p 8080:80 -e PROJECT_NAME=LaLolita Web"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BinPar/ts-next-boilerplate.git"
+    "url": "git+https://github.com/StefanyFernandez/lalolita-web.git"
   },
-  "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
+  "author": "Stefany <tefyfernandez8@gmail.com> (https://www.lalolita.design/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BinPar/ts-next-boilerplate/issues"
+    "url": "https://github.com/StefanyFernandez/lalolita-web/issues"
   },
-  "homepage": "https://github.com/BinPar/ts-next-boilerplate#readme",
+  "homepage": "https://github.com/StefanyFernandez/lalolita-web#readme",
   "dependencies": {
     "next": "^11",
     "react": "^17",
