@@ -19,16 +19,19 @@
     "type": "git",
     "url": "git+https://github.com/StefanyFernandez/lalolita-web.git"
   },
-  "author": "Stefany <tefyfernandez8@gmail.com> (https://www.lalolita.design/)",
+  "author": "Stefany <tefyfernandez8@gmail.com> (https://github.com/StefanyFernandez/)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StefanyFernandez/lalolita-web/issues"
   },
   "homepage": "https://github.com/StefanyFernandez/lalolita-web/pages/index.tsx",
   "dependencies": {
+    "i18next": "^21.6.6",
     "next": "^11",
     "react": "^17",
-    "react-dom": "^17"
+    "react-dom": "^17",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.15.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -37,6 +40,7 @@
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.7.6",
     "@types/react": "^17",
+    "@types/react-helmet": "^6.1.5",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "babel-jest": "^27.1.0",

@@ -1,0 +1,369 @@
+.about .mainSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about h2 {
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+.about h2 em {
+  font-weight: var(--regular);
+}
+
+/* SECTION Personal */
+
+.about .personal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  margin-bottom: 300px;
+  margin-top: 120px;
+}
+
+.about .personal .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: sticky;
+  top: 20px;
+}
+
+.about .personal .left .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.about .personal .image img {
+  width: 475px;
+}
+
+.about .personal .shape,
+.about .personal .circle,
+.about .personal .dots {
+  position: absolute;
+}
+
+.about .personal .shape {
+  bottom: 30px;
+  left: 15px;
+  z-index: 15;
+}
+
+.about .personal picture {
+  position: relative;
+  z-index: 10;
+}
+
+.about .personal .dots {
+  top: 200px;
+  left: 95px;
+  z-index: 5;
+}
+
+.about .personal .circle {
+  top: 85px;
+  left: 0;
+  z-index: 0;
+}
+
+.about .personal .right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  z-index: 20;
+  position: relative;
+}
+
+.about .personal .right .wrapper {
+  width: 450px;
+}
+
+.about .personal .right p + p {
+  margin-top: 20px;
+}
+
+/* !SECTION */
+
+/* SECTION Experience */
+
+.about .experience {
+  width: 100%;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.about .experience:before {
+  content: '';
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  background-color: var(--black-100);
+}
+
+.about .experience .title,
+.about .experience .content {
+  width: 50%;
+}
+
+.about .experience .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 30px;
+}
+
+.about .experience .title .content {
+  margin-top: 70px;
+}
+
+.about .experience .top,
+.about .experience .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.about .experience .top {
+  margin-bottom: 100px;
+}
+
+.about .experience .top .content,
+.about .experience .bottom .title {
+  align-self: flex-end;
+}
+
+.about .experience .bottom .content {
+  margin-bottom: 180px;
+}
+
+.experienceItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-transform: uppercase;
+}
+
+.experienceItem + .experienceItem {
+  margin-top: 25px;
+}
+
+.experienceItem p {
+  font-size: var(--F12);
+  font-weight: var(--medium);
+  color: var(--black-50);
+  letter-spacing: 0.02rem;
+  margin-bottom: 10px;
+}
+
+.experienceItem h5 {
+  font-size: var(--F18);
+  font-weight: var(--bold);
+  position: relative;
+  letter-spacing: 0.02rem;
+  margin-bottom: 10px;
+}
+
+.experienceItem h5:after {
+  content: '';
+  width: 45px;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  border-radius: 2px;
+  background-color: var(--black-100);
+}
+
+.experienceItem h6 {
+  font-size: var(--F14);
+  font-weight: var(--medium);
+  letter-spacing: 0.05rem;
+}
+
+.experienceItem.right {
+  align-items: flex-end;
+  padding-right: 50px;
+}
+
+.experienceItem.right h5:after {
+  right: 0;
+}
+
+.experienceItem.left {
+  padding-left: 50px;
+}
+
+.experienceItem.left h5:after {
+  left: 0;
+}
+
+
+/* !SECTION */
+
+/* SECTION Focus */
+
+.about .focus {
+  width: 50%;
+  align-self: flex-start;
+  padding-right: 85px;
+}
+
+.about .focus ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.about .focus li {
+  font-size: var(--F36);
+  font-weight: var(--medium);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.about .focus li + li {
+  margin-top: 45px;
+}
+
+/* !SECTION */
+
+/* SECTION Skills */
+
+.about .skills {
+  width: 50%;
+  align-self: flex-end;
+  padding-left: 85px;
+  transform: translateY(-350px);
+}
+
+.about .skills .wrapper {
+  background-color: var(--grey);
+  border-top-left-radius: 95px;
+  border-bottom-left-radius: 95px;
+  padding: 70px 30px 70px 85px;
+  width: calc(100% + 30px);
+}
+
+.about .skills ul {
+  margin-top: 50px;
+  list-style: none;
+}
+
+.about .skills li {
+  font-size: var(--F36);
+  font-weight: var(--medium);
+  text-transform: uppercase;
+}
+
+.about .skills li + li {
+  margin-top: 25px;
+}
+
+.about .skills h4 {
+  margin-top: 30px;
+  margin-left: 85px;
+}
+
+/* !SECTION */
+
+/* SECTION Email */
+
+.about .email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
+}
+
+.about .email h3 {
+  font-size: var(--F96);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: var(--extra-bold);
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.about .email h3 span {
+  font-weight: var(--regular);
+  font-size: var(--F56);
+}
+
+.about .social:after,
+.about .email h3:after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 50px);
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--grey);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about .email a {
+  font-size: var(--F36);
+  font-weight: var(--bold);
+  opacity: 0.8;
+  letter-spacing: 0.15rem;
+  margin-bottom: 60px;
+}
+
+.about .email h4 {
+  text-align: center;
+}
+
+/* !SECTION */
+
+/* SECTION Social */
+
+.about .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+  padding-bottom: 110px;
+  position: relative;
+}
+
+.about .social .arrow {
+  margin: 0 70px;
+}
+
+.about .social .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .social .icons a + a {
+  margin-left: 70px;
+}
+
+/* !SECTION */

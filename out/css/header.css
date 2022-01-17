@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: min(50vh, 50vw);
+  height: min(80vh, 50vw); */
+}
+
+.logoWrapper {
+  width: 115px;
+  height: auto;
+}

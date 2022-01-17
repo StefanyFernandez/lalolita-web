@@ -1,0 +1,71 @@
+
+@media (min-width: 1025px) {
+  .home {
+    height: calc(100vh - 6px);
+    overflow: hidden;
+  }
+
+  .home .mainSection {
+    display: flex;
+    min-height: calc(100vh - 280px);
+    margin-top: -50px;
+  }
+}
+
+.home .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60%;
+}
+
+.home .shape,
+.home .circle,
+.home .dots {
+  position: absolute;
+}
+
+.home .shape {
+  top: 105px;
+  left: 100px;
+  z-index: 15;
+}
+
+.home picture {
+  position: relative;
+  z-index: 10;
+}
+
+.home .dots {
+  top: 140px;
+  right: 155px;
+  z-index: 5;
+}
+
+.home .circle {
+  top: 0;
+  right: 50px;
+  z-index: 0;
+}
+
+.home .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+  padding-left: 100px;
+}
+
+.home h2 {
+  margin-bottom: 30px;
+}
+
+.home h3 {
+  margin-bottom: 20px;
+}
+
+.home h4 {
+  margin-bottom: 30px;
+}

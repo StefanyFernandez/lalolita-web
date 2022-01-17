@@ -1,0 +1,138 @@
+
+
+html,
+body {
+  width: 100vw;
+  font-family: var(--montserrat);
+  color: var(--black-100);
+  background-color: var(--black-100);
+  /* overflow-x: hidden; */
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100vw - 12px);
+  border: 6px solid black;
+  height: 100%;
+  min-height: calc( var(--window-height) - 12px);
+  background-color: var(--white-100);
+}
+
+.box,
+.mainSection {
+  width: calc(100% - 60px);
+  max-width: 1380px;
+}
+
+/* SECTION Text */
+
+h2 {
+  display: inline-flex;
+  font-size: var(--F96);
+  font-weight: var(--extra-light);
+  position: relative;
+  letter-spacing: 0.2rem;
+  line-height: var(--F100);
+  text-transform: uppercase;
+}
+
+h2:after {
+  content: '';
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--grey);
+  border-radius: 5px;
+}
+
+h2 .dot {
+  color: var(--pink);
+}
+
+h2 .comma {
+  color: var(--yellow);
+}
+
+h3 {
+  font-size: var(--F56);
+  font-weight: var(--black);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  line-height: 101.9%;
+  text-align: left;
+}
+
+h3.alignRight {
+  text-align: right;
+}
+
+h4 {
+  font-size: var(--F15);
+  font-weight: var(--medium);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--F18);
+  font-weight: var(--regular);
+  letter-spacing: 0.02rem;
+}
+
+p b {
+  font-size: var(--F20);
+}
+
+/* !SECTION */
+
+.click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: var(--F16);
+  font-weight: var(--medium);
+  border: 3px solid var(--black-100);
+  border-radius: 10px;
+  padding: 0 10px;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
+.click .arrow {
+  margin-left: 5px;
+}
+
+.click:hover {
+  background-color: var(--black-100);
+  color: var(--white-100);
+}
+
+.click:hover .arrow path {
+  stroke: var(--white-100);
+}
+
+.shape {
+  mix-blend-mode: multiply;
+}
+
+.shape,
+.circle,
+.dots {
+  pointer-events: none;
+}
