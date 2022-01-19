@@ -2,8 +2,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding-top: 30px;
+  width: calc(100vw - 12px);
+  position: relative;
+  z-index: 100;
 }
 
 header .box {
@@ -18,11 +19,6 @@ h1 {
   align-items: center;
   /* width: min(50vh, 50vw);
   height: min(80vh, 50vw); */
-}
-
-.logoWrapper {
-  width: 115px;
-  height: 140px;
 }
 
 nav a {
@@ -54,8 +50,50 @@ nav a.active:after {
   opacity: 1;
 }
 
+/* ANCHOR Media Query */
 
+@media (min-width: 768px) {
+  header {
+    padding-top: 30px;
+  }
 
-nav a + a {
-  margin-left: 50px;
+  .logoWrapper {
+    width: 115px;
+    height: 140px;
+  }
+
+  nav a + a {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white-100);
+  }
+
+  .logoWrapper {
+    width: 80px;
+    height: 100px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  nav a {
+    font-size: var(--F13);
+  }
+
+  nav a + a {
+    margin-top: 15px;
+  }
 }

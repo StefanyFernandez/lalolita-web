@@ -158,8 +158,7 @@ const about: React.FC = () => (
     </article>
     <article className="focus">
       <h3 className="alignRight">
-        Focused
-        <br />
+        Focused <br />
         on
       </h3>
       <ul>
@@ -188,8 +187,7 @@ const about: React.FC = () => (
           <br />+ UX
         </li>
         <li>
-          Front
-          <br />
+          Front <br />
           End
         </li>
       </ul>
@@ -197,8 +195,7 @@ const about: React.FC = () => (
     <article className="skills">
       <div className="wrapper">
         <h3>
-          Skilled
-          <br />
+          Skilled <br />
           at
         </h3>
         <ul>

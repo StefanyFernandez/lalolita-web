@@ -6,7 +6,9 @@ const Footer: React.FC = () => (
     <div className="box">
       {/* <Cat /> */}
       <p>
-        <span>© 2022 Lalolita Design - </span>
+        <span>
+          © 2022 Lalolita Design <span>-</span>{' '}
+        </span>
         <a title="Email us" href="mailto:info@lalolita.design">
           info@lalolita.design
         </a>
