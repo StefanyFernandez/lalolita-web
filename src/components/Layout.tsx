@@ -9,6 +9,8 @@ interface LayoutProps {
   mainClass?: string;
   title?: string;
   aboutActive?: boolean;
+  workActive?: boolean;
+  contactActive?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({
@@ -16,6 +18,8 @@ const Layout: React.FC<LayoutProps> = ({
   mainClass,
   title,
   aboutActive,
+  workActive,
+  contactActive,
 }) => {
   useEffect(() => {
     const appHeight = (): void => {
@@ -33,7 +37,11 @@ const Layout: React.FC<LayoutProps> = ({
       </Helmet>
       <MainHead title={title} />
       <main className={mainClass}>
-        <Header aboutActive={aboutActive} />
+        <Header
+          aboutActive={aboutActive}
+          workActive={workActive}
+          contactActive={contactActive}
+        />
         <section className="mainSection">{children}</section>
         <Footer />
       </main>

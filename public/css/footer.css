@@ -4,12 +4,12 @@ footer {
   align-items: center;
   width: 100%;
   background-color: var(--black-100);
+  z-index: 90;
 }
 
 @media (min-width: 1025px) {
   footer {
     height: 50px;
-    margin-top: 50px;
   }
 }
 
@@ -29,11 +29,12 @@ footer ul {
   justify-content: center;
   align-items: center;
   list-style: none;
+  gap: 30px;
 }
 
-footer li + li {
+/* footer li + li {
   margin-left: 30px;
-}
+} */
 
 footer li a {
   color: var(--white-75);
@@ -55,6 +56,7 @@ footer span {
 footer p a {
   font-weight: var(--semi-bold);
   letter-spacing: 0.2rem;
+  font-style: italic;
 }
 
 footer .cat {
@@ -88,7 +90,6 @@ footer li a:hover {
 }
 
 @media (max-width: 767px) {
-
   footer p {
     display: flex;
     flex-direction: column;

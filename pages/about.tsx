@@ -222,15 +222,13 @@ const about: React.FC = () => (
         info@lalolita.design
       </a>
       <h4>
-        Write us whenever you want,
-        <br />
+        Write us whenever you want, <br />
         we wanna read some legendary ideas.
       </h4>
     </article>
     <article className="social">
       <h3 className="alignRight">
-        You can find
-        <br />
+        You can find <br />
         us here too
       </h3>
       <ArrowBig />

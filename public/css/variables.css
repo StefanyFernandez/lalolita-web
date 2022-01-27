@@ -13,9 +13,9 @@
 
   --grey: #e5e5e5;
 
-  --pink: #FF006B;
-  --yellow: #FFE600;
-  --cyan: #00FFF0;
+  --pink: #ff006b;
+  --yellow: #ffe600;
+  --cyan: #00fff0;
 
   /* Font Sizes */
 
@@ -50,6 +50,8 @@
   --F50: 3.12rem;
   --F56: 3.5rem;
   --F60: 3.75rem;
+  --F66: 4.12rem;
+  --F70: 4.37rem;
   --F96: 6rem;
   --F100: 6.25rem;
 

@@ -50,6 +50,7 @@ h2 {
   letter-spacing: 0.2rem;
   line-height: var(--F100);
   text-transform: uppercase;
+  align-items: flex-end;
 }
 
 h2:after {
@@ -111,6 +112,20 @@ p b {
 }
 
 @media (max-width: 767px) {
+  @media (min-width: 425px) {
+    h2 {
+      font-size: var(--F66);
+      line-height: var(--F70);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      font-size: var(--F45);
+    }
+  }
+}
+
+@media (max-width: 424px) {
   h2 {
     font-size: var(--F45);
     line-height: var(--F50);
