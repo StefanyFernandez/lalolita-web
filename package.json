@@ -2,6 +2,7 @@
   "name": "la-lolita-web",
   "version": "0.0.1",
   "description": "LaLolita's Web",
+  "homepage": "https://lalolita.design",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -24,7 +25,6 @@
   "bugs": {
     "url": "https://github.com/StefanyFernandez/lalolita-web/issues"
   },
-  "homepage": "https://github.com/StefanyFernandez/lalolita-web/pages/index.tsx",
   "dependencies": {
     "i18next": "^21.6.6",
     "next": "^11",
