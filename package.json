@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p 80",
-    "build-static": "NODE_ENV=production;next build && next export",
+    "build-static": "next build && next export",
     "lint": "eslint \"**/*.{ts,tsx}\" --ignore-pattern node_modules/ --ignore-pattern prod_node_modules/",
     "test": "jest",
     "test-coverage": "jest --coverage",

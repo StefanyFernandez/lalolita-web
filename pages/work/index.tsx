@@ -41,8 +41,8 @@ interface WorkItemProps {
 }
 
 const WorkItem: React.FC<WorkItemProps> = ({ link, name, category }) => (
-  <Link href={`/work/${link}`}>
-    <a href="/work/nowo" id={category}>
+  <Link href={`/work/${link}.html`}>
+    <a href={`/work/${link}.html`} id={category}>
       <p>{name}</p>
       <img alt={name} src={`img/work/${link}`} />
     </a>
