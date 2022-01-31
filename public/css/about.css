@@ -9,6 +9,7 @@
   flex-direction: column;
   margin-bottom: 50px;
   padding-bottom: 30px;
+  align-items: flex-start;
 }
 
 .about h2 em {
@@ -125,6 +126,24 @@
   }
 }
 
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    .about .personal {
+      margin-top: 350px;
+    }
+
+    .about .personal .left {
+      top: 350px;
+    }
+  }
+
+  @media (min-height: 2000px) {
+    .about .personal {
+      margin-top: 600px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   @media (min-width: 851px) {
     .about .personal .left {
@@ -235,6 +254,15 @@
   }
   .about .experience .bottom .title {
     top: 120px;
+  }
+}
+
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    .about .experience .top .title,
+    .about .experience .bottom .title {
+      top: 350px;
+    }
   }
 }
 

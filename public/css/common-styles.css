@@ -19,10 +19,22 @@ main {
   justify-content: flex-start;
   align-items: center;
   width: calc(100vw - 12px);
-  border: 6px solid black;
+  border: 6px solid var(--black-100);
   height: 100%;
   min-height: calc(var(--window-height) - 12px);
   background-color: var(--white-100);
+}
+
+main:after {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  border: 6px solid var(--black-100);
+  z-index: 100;
+  pointer-events: none;
+  top: 0;
+  left: 0;
 }
 
 .box,
@@ -32,6 +44,15 @@ main {
 }
 
 /* ANCHOR Media Query */
+
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    .box,
+    .mainSection {
+      max-width: 1600px;
+    }
+  }
+}
 
 @media (max-width: 767px) {
   .box,
@@ -51,6 +72,7 @@ h2 {
   line-height: var(--F100);
   text-transform: uppercase;
   align-items: flex-end;
+  padding-bottom: 10px;
 }
 
 h2:after {
@@ -105,7 +127,41 @@ p b {
 
 /* ANCHOR Media Query */
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  @media (max-height: 899px) {
+    h2 {
+      font-size: var(--F66);
+      line-height: var(--F70);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      font-size: var(--F45);
+    }
+
+    h4 {
+      font-size: var(--F12);
+    }
+  }
+}
+
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    h2 {
+      font-size: var(--F116);
+      line-height: var(--F120);
+      padding-bottom: 20px;
+    }
+
+    h3 {
+      font-size: var(--F70);
+      line-height: var(--F76);
+    }
+
+    h4 {
+      font-size: var(--F19);
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -138,6 +194,7 @@ p b {
 
   h4 {
     font-size: var(--F12);
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -176,9 +233,19 @@ p b {
 
 /* ANCHOR Media Query */
 
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    .click {
+      font-size: var(--F20);
+      height: 55px;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .click {
     font-size: var(--F14);
+    letter-spacing: 0.1rem;
   }
 }
 

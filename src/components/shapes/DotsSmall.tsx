@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DotsSmall: React.FC = () => (
-  <div className="shape blue">
+  <div className="dots small">
     <svg
       width="103"
       height="211"

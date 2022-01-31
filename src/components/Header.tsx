@@ -10,8 +10,9 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({
   aboutActive,
+  contactActive,
   /* workActive,
-  contactActive, */
+  , */
 }) => (
   <header>
     <div className="box">
@@ -49,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({
         >
           <p>Work</p>
         </a>
-        {/* <Link href="/contact">
+        <Link href="/contact">
           <a
             href="/contact"
             title="Go to contact"
@@ -57,10 +58,10 @@ const Header: React.FC<HeaderProps> = ({
           >
             <p>Contact</p>
           </a>
-        </Link> */}
-        <a title="Contact" href="mailto:info@lalolita.design">
+        </Link>
+        {/* <a title="Contact" href="mailto:info@lalolita.design">
           <p>Contact</p>
-        </a>
+        </a> */}
       </nav>
     </div>
   </header>

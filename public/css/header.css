@@ -85,10 +85,23 @@ nav a.active p {
     padding-top: 30px;
   }
 
-  @media (max-height: 768px) {
+  @media (max-height: 850px) {
     header {
       --logo-width: 80px;
       --logo-height: 100px;
+    }
+  }
+}
+
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    header {
+      top: 80px;
+    }
+  }
+  @media (min-height: 2000px) {
+    header {
+      top: 160px;
     }
   }
 }
