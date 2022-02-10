@@ -47,6 +47,7 @@ footer p {
   font-weight: var(--bold);
   color: var(--white-75);
   letter-spacing: 0.15rem;
+  user-select: none;
 }
 
 footer span {
@@ -65,9 +66,11 @@ footer .cat {
   left: calc(100% + 250px);
 }
 
-footer p a:hover,
-footer li a:hover {
-  opacity: 0.75;
+@media (hover: hover) {
+  footer p a:hover,
+  footer li a:hover {
+    opacity: 0.75;
+  }
 }
 
 @media (max-width: 1024px) {

@@ -1,22 +1,10 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { tabs, TabsNames, works } from '../src/utils/worksList';
 import Layout from '../src/components/Layout';
-import { TabsNames, works } from 'src/utils/worksList';
-
-interface WorkItemProps {
-  link: string;
-  name: string;
-  category: TabsNames;
-}
-
-const WorkItem: React.FC<WorkItemProps> = ({ link, name, category }) => (
-  <Link href={`/work/${link}.html`}>
-    <a href={`/work/${link}.html`} id={category}>
-      <p>{name}</p>
-      <img alt={name} src={`img/work/${link}`} />
-    </a>
-  </Link>
-);
+import WorkItem from '../src/components/WorkItem';
+import Behance from 'src/components/Behance';
+import Dribbble from 'src/components/Dribbble';
+import RandomThings from 'src/components/RandomThings';
 
 const work: React.FC = () => {
   const [tabSelected, changeTab] = useState<TabsNames>(TabsNames.All);
@@ -35,7 +23,7 @@ const work: React.FC = () => {
       return (
         <>
           {!works.filter((i) => i.category === tabSelected).length && (
-            <p>There is nothing on {tabSelected}</p>
+            <RandomThings tabSelected={tabSelected} />
           )}
           {works?.length > 0 &&
             works
@@ -46,6 +34,8 @@ const work: React.FC = () => {
                   link={i.link}
                   category={i.category}
                   name={i.name}
+                  image={i.image}
+                  size={i.size}
                 />
               ))}
         </>
@@ -59,6 +49,8 @@ const work: React.FC = () => {
             link={i.link}
             category={i.category}
             name={i.name}
+            image={i.image}
+            size={i.size}
           />
         ))}
       </>
@@ -67,58 +59,70 @@ const work: React.FC = () => {
 
   return (
     <Layout title="Works" mainClass="work" workActive>
-      <article>
+      <article className="intro">
         <h2>
           Our <br />
-          Works<span className="dot">.</span>
+          Work<span className="dot">.</span>
         </h2>
-        <div>
+        <div className="content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non
-            rutrum nisl. Duis nibh justo, commodo sit amet faucibus quis,
-            blandit vel felis. Sed in nunc ac mi dapibus dictum sed et leo. Sed
-            feugiat lacus ligula, non tincidunt nibh pulvinar a.
+            Hi! Here you can find a showcase of our amazing projects, we like to
+            manage each one with the respect, passion and the love it deserves.
+          </p>
+          <p>
+            The type of projects we like are those that challenge us and keep us
+            always learning.
           </p>
         </div>
       </article>
       <article className="tabsWrapper">
-        <div className="tabsHeader">
-          <button
-            type="button"
-            onClick={(): void => setTabSelected(TabsNames.All)}
-          >
-            All
-          </button>
-          <button
-            type="button"
-            onClick={(): void => setTabSelected(TabsNames.Web)}
-          >
-            UI - UX
-          </button>
-          <button
-            type="button"
-            onClick={(): void => setTabSelected(TabsNames.Branding)}
-          >
-            Branding
-          </button>
-          <button
-            type="button"
-            onClick={(): void => setTabSelected(TabsNames.Lettering)}
-          >
-            Lettering
-          </button>
-          <button
-            type="button"
-            onClick={(): void => setTabSelected(TabsNames.Other)}
-          >
-            Other things
-          </button>
+        <div className="tabsHeader" role="tablist">
+          {tabs.map((i) => (
+            <button
+              type="button"
+              role="tab"
+              data-toggle="tab"
+              key={i.category}
+              title={i.category}
+              className={i.category === tabSelected ? 'active' : ''}
+              onClick={(): void => setTabSelected(i.category)}
+            >
+              {i.category}
+            </button>
+          ))}
         </div>
-        <div className="tabsContent">
+        <ul
+          className={`tabsContent${
+            !works.filter((i) => i.category === tabSelected).length &&
+            tabSelected !== TabsNames.All
+              ? ' empty'
+              : ''
+          }`}
+        >
           {getTab()}
-          {/* <Link href="/work/nowo">
-            <a href="/work/nowo">nowo</a>
-          </Link> */}
+        </ul>
+      </article>
+      <article className="moreWorks">
+        <h3>We have more works in here!</h3>
+        <div className="icons">
+          <a
+            target="_blank"
+            title="Go to Behance"
+            rel="noreferrer"
+            href="https://www.behance.net/tefyfernandez"
+            className="behance"
+          >
+            <Behance />
+          </a>
+          <a
+            target="_blank"
+            title="Go to Dribbble"
+            rel="noreferrer"
+            href="https://dribbble.com/tefyfernandez"
+            className="dribbble"
+          >
+            <Dribbble />
+          </a>
         </div>
       </article>
     </Layout>

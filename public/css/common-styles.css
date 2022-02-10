@@ -43,6 +43,11 @@ main:after {
   max-width: 1380px;
 }
 
+.image,
+svg {
+  pointer-events: none;
+}
+
 /* ANCHOR Media Query */
 
 @media (min-width: 2001px) {
@@ -73,6 +78,7 @@ h2 {
   text-transform: uppercase;
   align-items: flex-end;
   padding-bottom: 10px;
+  user-select: none;
 }
 
 h2:after {
@@ -102,6 +108,7 @@ h3 {
   text-transform: uppercase;
   line-height: 101.9%;
   text-align: left;
+  user-select: none;
 }
 
 h3.alignRight {
@@ -113,10 +120,12 @@ h4 {
   font-weight: var(--medium);
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  user-select: none;
 }
 
 p {
-  font-size: var(--F18);
+  font-size: var(--F17);
+  line-height: 150%;
   font-weight: var(--regular);
   letter-spacing: 0.02rem;
 }
@@ -168,6 +177,9 @@ p b {
 }
 
 @media (max-width: 767px) {
+  p {
+    font-size: var(--F16);
+  }
   @media (min-width: 425px) {
     h2 {
       font-size: var(--F66);
@@ -215,6 +227,7 @@ p b {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   background-color: transparent;
+  user-select: none;
   transition: background-color 0.5s ease;
 }
 
@@ -222,13 +235,15 @@ p b {
   margin-left: 5px;
 }
 
-.click:hover {
-  background-color: var(--black-100);
-  color: var(--white-100);
-}
+@media (hover: hover) {
+  .click:hover {
+    background-color: var(--black-100);
+    color: var(--white-100);
+  }
 
-.click:hover .arrow path {
-  stroke: var(--white-100);
+  .click:hover .arrow path {
+    stroke: var(--white-100);
+  }
 }
 
 /* ANCHOR Media Query */

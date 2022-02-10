@@ -736,9 +736,10 @@
   justify-content: center;
   align-items: center;
 }
-
-.about .social a:hover {
-  opacity: 0.75;
+@media (hover: hover) {
+  .about .social a:hover {
+    opacity: 0.75;
+  }
 }
 
 /* ANCHOR Media Query */

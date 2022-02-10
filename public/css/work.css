@@ -4,3 +4,360 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+.work .intro {
+  display: flex;
+}
+
+.work .intro .content p + p {
+  margin-top: 20px;
+}
+
+.work .tabsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.work .tabsHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.work .tabsHeader button {
+  text-transform: uppercase;
+  font-size: var(--F12);
+  color: var(--black-100);
+  font-weight: var(--bold);
+  letter-spacing: 0.2rem;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.work .tabsHeader button.active:after {
+  content: '';
+  width: calc(100% + 5px);
+  height: 2px;
+  background-color: var(--black-100);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.work .tabsHeader button:not(.active) {
+  opacity: 0.5;
+}
+
+.work .tabsContent {
+  width: 100%;
+  list-style: none;
+}
+
+.work .tabsContent:not(.empty) {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.work .tabsContent.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.work .tabsContent.empty li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.work .tabsContent.empty h4 {
+  text-align: center;
+}
+
+.work .tabsContent.empty .gif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work .tabsContent.empty .gif > div {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.work .tabsContent.empty .gif iframe {
+  border: none;
+}
+
+.work .tabsContent.empty .gif p {
+  font-size: var(--F12);
+  opacity: 0.5;
+  font-weight: var(--semi-bold);
+  margin-top: 5px;
+}
+
+.workItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.workItem a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.workItem a:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-10);
+  opacity: 0;
+}
+
+.workItem .image {
+  width: 100%;
+  height: 100%;
+}
+
+.workItem img {
+  max-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.workItem .name {
+  user-select: none;
+  text-transform: uppercase;
+  color: var(--white-100);
+  background-color: var(--black-100);
+  font-weight: var(--bold);
+  font-size: var(--F14);
+  letter-spacing: 0.2rem;
+  padding: 0 5px;
+  opacity: 0;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .workItem a:hover .name,
+  .workItem a:hover:after {
+    opacity: 1;
+  }
+}
+
+.moreWorks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  padding-top: 85px;
+  position: relative;
+}
+
+.moreWorks:after {
+  content: '';
+  width: calc(100% - 50px);
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  background-color: var(--grey);
+}
+
+.moreWorks h3 {
+  text-align: center;
+}
+
+.moreWorks .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+@media (hover: hover) {
+  .moreWorks a:hover {
+    opacity: 0.75;
+  }
+}
+
+.moreWorks .behance {
+  width: 100px;
+}
+
+.moreWorks .dribbble {
+  width: 85px;
+}
+
+.moreWorks .socialIcon,
+.moreWorks svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1025px) {
+  .work {
+    --main-section-height: calc(var(--window-height) - 55px);
+  }
+
+  .work .mainSection {
+    gap: 85px;
+    min-height: var(--main-section-height);
+  }
+
+  .work .intro {
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 200px;
+  }
+
+  .work h2 {
+    align-items: flex-end;
+    text-align: right;
+    width: fit-content;
+  }
+
+  .work .intro .content {
+    margin-left: 100px;
+    width: 48ch;
+  }
+
+  .work .tabsHeader {
+    gap: 75px;
+    justify-content: center;
+  }
+
+  .work .tabsContent:not(.empty) {
+    padding: 0 50px;
+  }
+
+  .work .tabsContent.empty .gif {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+@media (min-width: 2001px) {
+  @media (min-height: 1081px) {
+    .work .intro {
+      margin-top: 250px;
+    }
+  }
+  @media (min-height: 2000px) {
+    .work .intro {
+      margin-top: 400px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .work .mainSection {
+    gap: 50px;
+  }
+
+  .work .intro {
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work h2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .work .intro .content {
+    margin-top: 50px;
+    width: min(calc(100% - 40px), 48ch);
+  }
+}
+
+@media (min-width: 768px) {
+  .work .tabsContent.empty .gif {
+    width: 500px;
+    height: 400px;
+  }
+  .workItem.wide {
+    grid-column: span 2;
+  }
+  .workItem.tall {
+    grid-row: span 2;
+  }
+  .workItem.big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .work .tabsHeader {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 767px) {
+  .work .tabsHeader {
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 0 25px;
+    overflow-x: auto;
+  }
+
+  .work .tabsContent {
+    padding: 0 10px;
+  }
+
+  .moreWorks .behance {
+    width: 60px;
+  }
+
+  .moreWorks .dribbble {
+    width: 45px;
+  }
+}
+
+@media (max-width: 424px) {
+  .work .tabsContent.empty .gif {
+    width: 280px;
+    height: 300px;
+  }
+}

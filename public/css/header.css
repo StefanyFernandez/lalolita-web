@@ -8,25 +8,27 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  pointer-events: none;
 }
 
 header .box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
 }
 
 h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white-100);
 }
 
 .logoWrapper {
   width: var(--logo-width);
   height: var(--logo-height);
   transition: width 0.2s ease;
+  pointer-events: all;
 }
 
 nav {
@@ -36,6 +38,7 @@ nav {
 
 nav a {
   position: relative;
+  pointer-events: all;
 }
 
 nav a p {
@@ -44,6 +47,8 @@ nav a p {
   font-size: var(--F14);
   letter-spacing: 0.2rem;
   z-index: 1;
+  user-select: none;
+  padding: 0 5px;
 }
 
 nav a:after {
@@ -60,8 +65,10 @@ nav a:after {
   opacity: 0;
 }
 
-nav a:hover {
-  opacity: 0.75;
+@media (hover: hover) {
+  nav a:hover {
+    opacity: 0.5;
+  }
 }
 
 nav a.active:after {

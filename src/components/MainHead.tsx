@@ -56,6 +56,7 @@ const MainHead: React.FC<MainHeadProps> = ({ title }) => (
     <link rel="stylesheet" type="text/css" href="/css/home.css" />
     <link rel="stylesheet" type="text/css" href="/css/about.css" />
     <link rel="stylesheet" type="text/css" href="/css/work.css" />
+    <link rel="stylesheet" type="text/css" href="/css/work-detail.css" />
     <link rel="stylesheet" type="text/css" href="/css/contact.css" />
     <link rel="stylesheet" type="text/css" href="/css/error.css" />
   </Head>

@@ -308,3 +308,7 @@ img {
 [hidden] {
   display: none;
 }
+
+::selection {
+  background-color: var(--grey);
+}

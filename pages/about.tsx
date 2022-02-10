@@ -59,9 +59,10 @@ const about: React.FC = () => (
           </p>
 
           <p>
-            I like to say that I am very organized and structured in my work,
-            that I have an eye for details and that if I don’t know something I
-            am one of those who may be curious to find out.
+            I like to say that I am very organized and structured when it comes
+            to my work. I also have an eye for details and that if I don’t know
+            something I’m one of those who may be curious to learn everything
+            about it.
           </p>
 
           <p>
@@ -69,7 +70,7 @@ const about: React.FC = () => (
             <b>LaLolita</b> and it’s pretty simple, my cat’s name is Lola, and
             I’ve always liked her diminutive “Lolita” so when I was thinking of
             create my own brand, her name came up so quickly in my mind that I
-            had to used it.
+            had to use it.
           </p>
           <p>
             You could also find my other cat Paco wandering around here and
@@ -211,7 +212,7 @@ const about: React.FC = () => (
           <li>React Native</li>
         </ul>
       </div>
-      <h4>& More because I learn quick.</h4>
+      <h4>& More because I’m a quick learner</h4>
     </article>
     <article className="email">
       <h3>

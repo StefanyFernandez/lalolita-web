@@ -11,8 +11,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({
   aboutActive,
   contactActive,
-  /* workActive,
-  , */
+  workActive,
 }) => (
   <header>
     <div className="box">
@@ -33,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({
             <p>About</p>
           </a>
         </Link>
-        {/*  <Link href="/work">
+        <Link href="/work">
           <a
             href="/work"
             title="Go to work"
@@ -41,15 +40,15 @@ const Header: React.FC<HeaderProps> = ({
           >
             <p>Work</p>
           </a>
-        </Link> */}
-        <a
+        </Link>
+        {/* <a
           href="https://drive.google.com/drive/folders/1DdiODWVebV52cFL5o17qGW_pEiF3GtAU?usp=sharing"
           title="Go to works"
           target="_blank"
           rel="noreferrer"
         >
           <p>Work</p>
-        </a>
+        </a> */}
         <Link href="/contact">
           <a
             href="/contact"
