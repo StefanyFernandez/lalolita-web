@@ -224,8 +224,22 @@ const about: React.FC = () => (
       </a>
       <h4>
         Write us whenever you want, <br />
-        we wanna read some legendary ideas.
+        we wanna read some legendary ideas. <br />
+        <br />
+        <span>
+          And if you want, you can have my <strong>resume</strong> on pdf too.
+        </span>
       </h4>
+      <a
+        className="download click"
+        title="Download resume"
+        target="_blank"
+        rel="noreferrer"
+        href="/stefany-fernandez-designer-cv.pdf"
+        download="stefany-fernandez-designer-cv"
+      >
+        Download it!
+      </a>
     </article>
     <article className="social">
       <h3 className="alignRight">

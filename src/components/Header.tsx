@@ -32,9 +32,9 @@ const Header: React.FC<HeaderProps> = ({
             <p>About</p>
           </a>
         </Link>
-        <Link href="/work">
+        <Link href="/work/">
           <a
-            href="/work"
+            href="/work/"
             title="Go to work"
             className={workActive ? 'active' : ''}
           >

@@ -275,3 +275,83 @@ p b {
 .dots {
   pointer-events: none;
 }
+
+/* SECTION Cookies */
+
+.cookies {
+  padding: 0 10px;
+}
+
+.cookies > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+.cookies p {
+  text-transform: uppercase;
+  font-weight: var(--bold);
+  font-size: var(--F15);
+  opacity: 0.75;
+  letter-spacing: 0.15rem;
+}
+
+.cookies iframe {
+  border: none;
+}
+
+.cookies .gif {
+  height: 100px;
+  width: 100px;
+  pointer-events: none;
+}
+
+.cookies .gif .giphyDisclaimer {
+  font-size: var(--F07);
+  opacity: 0;
+}
+
+.cookies .gif > div {
+  width: 100%;
+  height: 100%;
+}
+
+.cookies button {
+  text-transform: uppercase;
+  font-weight: var(--bold);
+  font-size: var(--F15);
+  letter-spacing: 0.15rem;
+}
+
+.cookies button:hover {
+  opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+  .cookies {
+    height: 100px;
+  }
+
+  .cookies p,
+  .cookies button {
+    font-size: var(--F15);
+  }
+}
+
+@media (max-width: 767px) {
+  .cookies {
+    padding: 10px;
+  }
+
+  .cookies p,
+  .cookies button {
+    font-size: var(--F12);
+  }
+
+  .cookies .gif {
+    height: 70px;
+  }
+}
+
+/* !SECTION */

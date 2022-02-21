@@ -4,18 +4,23 @@ import Behance from './Behance';
 import Dribbble from './Dribbble';
 import Layout from './Layout';
 import Arrow from './Arrow';
+import { Works, works } from '../utils/worksList';
+import WorkItem from './WorkItem';
+import Drive from './Drive';
 
 interface WorkLayoutProps {
   children: ReactNode;
   name: string;
   description?: ReactElement;
-  work?: string;
+  workPlace?: string;
   personal?: boolean;
   date: string;
   role?: string;
   client?: string;
   industry?: string;
-  tools: string;
+  tools?: string;
+  print?: boolean;
+  relatedLinks: string | string[];
 }
 
 const WorkLayout: React.FC<WorkLayoutProps> = ({
@@ -23,18 +28,35 @@ const WorkLayout: React.FC<WorkLayoutProps> = ({
   name,
   description,
   personal,
-  work,
+  workPlace,
   date,
   role,
   client,
   industry,
   tools,
+  print,
+  relatedLinks,
 }) => {
+  const related = (): Works[] => {
+    const rel = [];
+    for (let i = 0; i < works.length; i++) {
+      const { link } = works[i];
+      if (relatedLinks.includes(link)) {
+        rel.push(works[i]);
+      }
+    }
+    return rel;
+  };
+
   return (
-    <Layout mainClass="workDetail" workActive>
+    <Layout
+      title={name}
+      mainClass={`workDetail${print ? ' print' : ''}`}
+      workActive
+    >
       <article className="intro">
-        <Link href="/work">
-          <a className="goBackClick" title="Go Back" href="/work">
+        <Link href="/work/">
+          <a className="goBackClick" title="Go Back" href="/work/">
             <Arrow />
             <p>Volver</p>
           </a>
@@ -48,7 +70,7 @@ const WorkLayout: React.FC<WorkLayoutProps> = ({
             <p className="info">
               {personal && 'Personal project '}
               {!personal && 'Created at '}
-              {!personal && <b>{work}</b>} <b>- {date}</b>
+              {!personal && <b>{workPlace}</b>} <b>- {date}</b>
             </p>
             {role && (
               <p className="info">
@@ -79,6 +101,22 @@ const WorkLayout: React.FC<WorkLayoutProps> = ({
         </div>
       </article>
       <article className="contentWrapper">{children}</article>
+      <article className="otherWorks">
+        <h4>You might like these too</h4>
+        <ul className="list">
+          {related().map((i) => (
+            <WorkItem
+              key={i.link}
+              link={i.link}
+              category={i.category}
+              name={i.name}
+              image={i.image}
+              size={i.size}
+              detail
+            />
+          ))}
+        </ul>
+      </article>
       <article className="moreWorks">
         <h3>We have more works in here!</h3>
         <div className="icons">
@@ -99,6 +137,15 @@ const WorkLayout: React.FC<WorkLayoutProps> = ({
             className="dribbble"
           >
             <Dribbble />
+          </a>
+          <a
+            target="_blank"
+            title="Go to Drive"
+            rel="noreferrer"
+            href="https://drive.google.com/drive/folders/1DdiODWVebV52cFL5o17qGW_pEiF3GtAU?usp=sharing"
+            className="drive"
+          >
+            <Drive />
           </a>
         </div>
       </article>

@@ -9,6 +9,7 @@ interface WorkItemProps {
   category: TabsNames;
   image: string;
   size?: WorkSizes;
+  detail?: boolean;
 }
 
 const WorkItem: React.FC<WorkItemProps> = ({
@@ -17,17 +18,25 @@ const WorkItem: React.FC<WorkItemProps> = ({
   category,
   image,
   size,
+  detail,
 }) => (
   <li
     className={`workItem${size ? ` ${size}` : ''}`}
     id={`${category} ${link}`}
   >
-    <Link href={`/work/${link}`}>
-      <a title={name} href={`/work/${link}`}>
+    <Link href={`/work/${category.toLowerCase().replace(/\s+/g, '')}/${link}`}>
+      <a
+        title={name}
+        href={`/work/${category.toLowerCase().replace(/\s+/g, '')}/${link}`}
+      >
         <p className="name">{name}</p>
       </a>
     </Link>
-    <Image title={name} source={`img/works/${image}`} format="jpeg" />
+    <Image
+      title={name}
+      source={`${detail ? '../../' : ''}img/works/${image}`}
+      format="jpeg"
+    />
   </li>
 );
 

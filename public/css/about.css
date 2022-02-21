@@ -650,10 +650,17 @@
 .about .email a {
   font-weight: var(--bold);
   opacity: 0.8;
+  margin-top: 30px;
 }
 
 .about .email h4 {
   text-align: center;
+}
+
+.about .email .download {
+  font-size: var(--F16);
+  font-weight: var(--medium);
+  margin-top: 50px;
 }
 
 /* ANCHOR Media Query */
@@ -711,6 +718,11 @@
 
   .about .email h4 br {
     display: none;
+  }
+
+  .about .email h4 span {
+    margin-top: 20px;
+    display: inline-block;
   }
 }
 
